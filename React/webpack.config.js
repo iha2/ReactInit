@@ -27,11 +27,11 @@ module.exports = {
   module: {
     rules:[
       { test: /\.less$/, use: ExtractTextPlugin.extract({ fallback: "style-loader", use: "css-loader" }) },
-      { test: /\.js[x]?$/, loader: 'babel-loader', exclude: /node_modules/ },
-      { test: /\.(woff|woff2)(\?v=\d+\.\d+\.\d+)?$/, loader: 'url?limit=10000&mimetype=application/font-woff'},
-      { test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/, loader: 'url?limit=10000&mimetype=application/octet-stream'},
-      { test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: 'file'},
-      { test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, loader: 'url?limit=10000&mimetype=image/svg+xml'}
+      { test: /\.js[x]?$/, use: 'babel-loader', exclude: /node_modules/ },
+      { test: /\.(woff|woff2)(\?v=\d+\.\d+\.\d+)?$/, use: 'url?limit=10000&mimetype=application/font-woff'},
+      { test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/, use: 'url?limit=10000&mimetype=application/octet-stream'},
+      { test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, use: 'file'},
+      { test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, use: 'url?limit=10000&mimetype=image/svg+xml'}
     ]
   },
   plugins: [
