@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ReactDOM from "react-dom";
 import List from './List';
 import { Button } from 'react-bootstrap';
+import '../stylesheets/App.less';
 
 export default class App extends Component {
 
