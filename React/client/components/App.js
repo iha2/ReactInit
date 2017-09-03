@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from "react-dom";
+import List from './List';
 import { Button } from 'react-bootstrap';
 
 export default class App extends Component {
@@ -9,7 +10,7 @@ export default class App extends Component {
     window.React = React;
     this.state = {
       term: '',
-      items: ['test', 'test', 'test', 'test', 'test', 'test', 'test', 'test', 'test', 'test', 'test', 'test', 'test', 'test']
+      items: ['test', 'test', 'test', 'test', 'test', 'test', 'test']
     }
   }
 
@@ -28,9 +29,10 @@ export default class App extends Component {
       <div>
         <form className="App" onSubmit={this.onSubmit}>
           <input type="text" value={this.state.term} onChange={this.onChange} />
-          <Button value="Submit">Submit</Button>
+          <Button>Submit</Button>
         </form>
         <div>
+          <List items={ this.state.items } />
         </div>
       </div>
     )
