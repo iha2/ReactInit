@@ -3,12 +3,16 @@ import ReactDOM from "react-dom";
 import List from './List';
 import { Button } from 'react-bootstrap';
 import '../stylesheets/App.less';
+import { createStore } from 'redux';
+import todoApp from '../redux/reducers';
+// import VisibleTodoList from ' ';
 
 export default class App extends Component {
 
   constructor(props) {
     super(props);
     window.React = React;
+    let store = createStore(todoApp);
     this.state = {
       term: '',
       items: ['test', 'test', 'test', 'test', 'test', 'test', 'test']
@@ -40,3 +44,4 @@ export default class App extends Component {
   }
 }
 
+// {/* <VisibleTodoList /> */}
